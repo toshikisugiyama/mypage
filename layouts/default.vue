@@ -1,8 +1,26 @@
 <template>
   <div>
+    <Header :activeMenu="activeMenu" @clickMenu="activeMenu = $event" />
+    <Menu :activeMenu="activeMenu" />
     <nuxt />
   </div>
 </template>
+
+<script>
+import Header from '@/components/Header.vue'
+import Menu from '@/components/Menu.vue'
+export default {
+  components: {
+    Header,
+    Menu,
+  },
+  data() {
+    return {
+      activeMenu: false,
+    }
+  }
+}
+</script>
 
 <style>
 html {
