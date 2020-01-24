@@ -4,27 +4,16 @@
       <h1 class="main__top__title">Sugiyama Toshiki</h1>
       <h2 class="main__top__title">スギヤマトシキ</h2>
       <figure class="main__top__figure">
-        <img src="../assets/sugiyamatoshiki.svg" alt="sugiyamatoshiki" height="180px">
+        <img src="@/assets/sugiyamatoshiki.svg" alt="sugiyamatoshiki" height="180px">
       </figure>
       <div class="main__top__sns">
-        <figure class="main__top__sns__item">
-          <a href="https://github.com/toshikisugiyama">
-            <img src="../assets/github.svg" alt="github" height="30px">
-          </a>
-        </figure>
-        <figure class="main__top__sns__item">
-          <a href="https://twitter.com/llwz886q">
-            <img src="../assets/twitter.svg" alt="twitter" height="30px">
-          </a>
-        </figure>
-        <figure class="main__top__sns__item">
-          <a href="https://www.facebook.com/toshiki.sugiyama.31">
-            <img src="../assets/facebook.svg" alt="facebook" height="30px">
-          </a>
-        </figure>
-        <figure class="main__top__sns__item">
-          <a href="https://www.instagram.com/axa81468">
-            <img src="../assets/instagram.svg" alt="instagram" height="30px">
+        <figure
+          class="main__top__sns__item"
+          v-for="sns in snsAccounts"
+          :key="sns.name"
+        >
+          <a :href="sns.url">
+            <img :src="sns.src" :alt="sns.name" height="30px">
           </a>
         </figure>
       </div>
@@ -38,6 +27,26 @@
     </section>
   </main>
 </template>
+
+<script>
+import github from '@/assets/github.svg'
+import twitter from '@/assets/twitter.svg'
+import facebook from '@/assets/facebook.svg'
+import instagram from '@/assets/instagram.svg'
+
+export default {
+  data() {
+    return {
+      snsAccounts: [
+        {name: 'github', src: github, url: 'https://github.com/toshikisugiyama',},
+        {name: 'twitter', src: twitter, url: 'https://twitter.com/llwz886q',},
+        {name: 'facebook', src: facebook, url: 'https://www.facebook.com/toshiki.sugiyama.31',},
+        {name: 'instagram', src: instagram, url: 'https://www.instagram.com/axa81468',},
+      ],
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/variable.scss';
