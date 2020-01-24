@@ -13,7 +13,7 @@
           :key="sns.name"
         >
           <a :href="sns.url">
-            <img :src="sns.src" :alt="sns.name" height="30px">
+            <img :src="sns.src" :alt="sns.name" height="32px">
           </a>
         </figure>
       </div>
@@ -53,7 +53,7 @@ export default {
 .main {
   &__top{
     padding: $header-height+20px $side-space;
-    background-color: #868282;
+    background-color: $dark-color;
     height: 568px;
     text-align: center;
     &__title {
@@ -86,8 +86,20 @@ export default {
       margin: 0 auto;
       &__item {
         margin: 0;
-        img {
-          object-fit: contain;
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+        border-radius: 5px;
+        a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $light-color;
+          img {
+            object-fit: cover;
+          }
         }
       }
     }
