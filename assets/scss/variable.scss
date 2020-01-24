@@ -2,3 +2,8 @@ $header-height: 40px;
 $side-space: 18px;
 $dark-color: #333;
 $light-color: #d3d3d3;
+@mixin title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}

@@ -19,7 +19,7 @@
       </div>
     </section>
     <section class="main__bottom">
-      <h1>自己紹介</h1>
+      <h1 class="main__bottom__title">自己紹介</h1>
       <p>　兵庫県出身、1990年生まれ</p>
       <p>　学生時代は、3年間藻類を研究しました。</p>
       <p>　食酢の製造会社で3年間勤務の後、フィリピンセブ島のスクールで英語とプログラミングを勉強し、翌年には再びセブ島に戻り、オフショア開発案件を担当しました。</p>
@@ -56,14 +56,12 @@ export default {
     background-color: $dark-color;
     height: 568px;
     text-align: center;
-    &__title {
-      color: #fff;
-    }
-    h1 {
+    color: $light-color;
+    &__title:first-child {
       margin: 10px auto;
       font-size: 40px;
     }
-    h2 {
+    &__title:nth-child(2) {
       margin: 10px auto 40px;
       font-size: 20px;
     }
@@ -71,6 +69,7 @@ export default {
       width: 175px;
       height: 175px;
       border-radius: 50%;
+      border: $light-color solid 1px;
       background-color: #fff;
       margin: 0 auto 40px;
       overflow: hidden;
@@ -89,6 +88,7 @@ export default {
         height: 30px;
         width: 30px;
         overflow: hidden;
+        border: $light-color solid 1px;
         border-radius: 5px;
         a {
           height: 100%;
@@ -105,7 +105,16 @@ export default {
     }
   }
   &__bottom {
-    padding: 18px;
+    padding: $header-height $side-space $header-height*2;
+    background-color: #000;
+    color: $light-color;
+    &__title {
+      text-align: center;
+      @include title;
+    }
+    p {
+      margin: 0 0 $side-space/2 0;
+    }
   }
 }
 </style>

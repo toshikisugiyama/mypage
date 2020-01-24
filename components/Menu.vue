@@ -26,8 +26,6 @@ export default {
     return {
       menus: [
         { title: 'top', path: '/', },
-        { title: 'about', path: '/about', },
-        { title: 'skill', path: '/skill', },
         { title: 'portfolio', path: '/portfolio', },
         { title: 'blog', path: '/blog', },
         { title: 'contact', path: '/contact', },
@@ -66,20 +64,26 @@ export default {
   top: 0;
   bottom: 0;
   padding: $header-height 0;
+  z-index: 9;
+  @media screen and (min-width: 680px) {
+    left: 50%;
+  }
   &__nav {
     &__lists {
       list-style: none;
       padding: 0;
       &__item {
-        height: $header-height;
+        height: $header-height*2.5;
         transition: background-color 0.3s;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-weight: bold;
         a {
           display: block;
           width: 100%;
-          padding: $side-space;
+          line-height: $header-height*2.5;
+          padding: 0 $side-space;
           color: $dark-color;
         }
       }
