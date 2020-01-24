@@ -29,8 +29,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/variable.scss';
 .header {
-  height: 40px;
+  height: $header-height;
   position: fixed;
   top: 0;
   left: 0;

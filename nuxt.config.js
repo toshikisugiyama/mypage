@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -23,6 +22,8 @@ export default {
   ** Global CSS
   */
   css: [
+    // プロジェクト内の SCSS ファイル
+    '@/assets/scss/variable.scss',
   ],
   /*
   ** Plugins to load before mounting the App

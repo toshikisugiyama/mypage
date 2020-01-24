@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Header :activeMenu="activeMenu" @clickMenu="activeMenu = $event" />
-    <Menu :activeMenu="activeMenu" />
+    <Header :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
+    <Menu :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
     <nuxt />
   </div>
 </template>

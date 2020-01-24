@@ -40,9 +40,10 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/variable.scss';
 .main {
   &__top{
-    padding: 60px 18px;
+    padding: $header-height+20px $side-space;
     background-color: #868282;
     height: 568px;
     text-align: center;
