@@ -49,7 +49,8 @@ export default {
       height: 2px;
       width: 100%;
       margin-bottom: 5px;
-      background-color: black;
+      background-color: $light-color;
+      filter: drop-shadow(1px 1px 1px $dark-color);
       transition: all .3s ease-out;
     }
     &_bar:last-child {
@@ -58,6 +59,10 @@ export default {
   }
   &__menu_open {
     position: relative;
+    .header__menu__bar {
+      background-color: $dark-color;
+      filter: none;
+    }
     .header__menu__bar:first-child,
     .header__menu__bar:nth-child(2) {
       position: absolute;

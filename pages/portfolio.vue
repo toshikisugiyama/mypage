@@ -1,4 +1,5 @@
 <template>
+<div>
   <section class="portfolio">
     <h1 class="portfolio__title">portfolio</h1>
     <div class="portfolio__lists">
@@ -15,12 +16,18 @@
       </div>
     </div>
   </section>
+  <Footer />
+</div>
 </template>
 
 <script>
+import Footer from '../components/Footer.vue'
 import name_game from '@/assets/images/name_game.svg'
 import count_down from '@/assets/images/count_down.svg'
 export default {
+  components: {
+    Footer,
+  },
   data() {
     return {
       works: [
@@ -36,8 +43,8 @@ export default {
 @import '@/assets/scss/variable.scss';
 .portfolio {
   padding: $header-height 0;
-  background-color: $light-color;
-  color: $dark-color;
+  background-color: $main-color;
+  color: $light-color;
   &__title {
     text-align: center;
     padding: 0 $side-space;
@@ -56,7 +63,7 @@ export default {
       width: 304px;
       margin: $side-space;
       &__contents {
-        background-color: #fff;
+        background-color: $light-color;
         color: $dark-color;
         border-radius: 10px;
         padding: $side-space;
@@ -67,6 +74,7 @@ export default {
           height: 149px;
           margin-bottom: 10px;
           transform: translateX($side-space*(-2));
+          filter: drop-shadow(1px 1px 1px $dark-color);
         }
         &__description {
           transform: translateX($side-space);

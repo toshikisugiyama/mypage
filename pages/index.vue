@@ -55,7 +55,7 @@ export default {
 .main {
   &__top{
     padding: $header-height+20px $side-space;
-    background-color: $dark-color;
+    background-color: $main-color;
     height: 568px;
     text-align: center;
     color: $light-color;
