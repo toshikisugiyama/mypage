@@ -4,7 +4,7 @@
       <h1 class="main__top__title">Sugiyama Toshiki</h1>
       <h2 class="main__top__title">スギヤマトシキ</h2>
       <figure class="main__top__figure">
-        <img src="@/assets/sugiyamatoshiki.svg" alt="sugiyamatoshiki" height="180px">
+        <img :src="face" alt="sugiyamatoshiki" height="180px">
       </figure>
       <div class="main__top__sns">
         <figure
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import face from '@/assets/images/sugiyamatoshiki.svg'
 import github from '@/assets/images/github.svg'
 import twitter from '@/assets/images/twitter.svg'
 import facebook from '@/assets/images/facebook.svg'
@@ -37,6 +38,7 @@ import instagram from '@/assets/images/instagram.svg'
 export default {
   data() {
     return {
+      face,
       snsAccounts: [
         {name: 'github', src: github, url: 'https://github.com/toshikisugiyama',},
         {name: 'twitter', src: twitter, url: 'https://twitter.com/llwz886q',},

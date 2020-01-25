@@ -50,11 +50,11 @@ export default {
     extend (config, ctx) {
     }
   },
-  server: {
-    port: 8000,
-    host: '0.0.0.0',
-  },
-  generate: {
-    fallback: true
-  }
+  // server: {
+  //   port: 8000,
+  //   host: '0.0.0.0',
+  // },
+  // generate: {
+  //   fallback: true
+  // }
 }
