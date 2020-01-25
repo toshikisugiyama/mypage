@@ -43,10 +43,10 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/variable.scss';
 .slide-enter-active {
-  animation: slide-in 0.8s;
+  animation: slide-in 0.3s;
 }
 .slide-leave-active {
-  animation: slide-in 0.8s reverse;
+  animation: slide-in 0.3s reverse;
 }
 @keyframes slide-in {
   from {
@@ -64,8 +64,8 @@ export default {
   top: 0;
   bottom: 0;
   padding: $header-height 0;
-  z-index: 9;
-  @media screen and (min-width: 680px) {
+  z-index: 11;
+  @media screen and (min-width: $tab) {
     left: 50%;
   }
   &__nav {
@@ -83,8 +83,8 @@ export default {
           display: block;
           width: 100%;
           line-height: $header-height*2.5;
-          padding: 0 $side-space;
           color: $dark-color;
+          padding: 0 $side-space;
         }
       }
       &__item:hover {

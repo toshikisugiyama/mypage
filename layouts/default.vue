@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
+    <Layer :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
     <Menu :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
     <nuxt />
   </div>
@@ -8,10 +9,12 @@
 
 <script>
 import Header from '@/components/Header.vue'
+import Layer from '@/components/Layer.vue'
 import Menu from '@/components/Menu.vue'
 export default {
   components: {
     Header,
+    Layer,
     Menu,
   },
   data() {

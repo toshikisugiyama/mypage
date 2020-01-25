@@ -49,7 +49,7 @@ export default {
     align-items: flex-start;
     max-width: 1360px;
     margin: 0 auto;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: $tab) {
       justify-content: center;
     }
     &__item {

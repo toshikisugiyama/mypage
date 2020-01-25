@@ -40,7 +40,7 @@ export default {
   justify-content: flex-end;
   align-items: center;
   padding: 0 18px;
-  z-index: 10;
+  z-index: 20;
   &__menu {
     height: 20px;
     width: 30px;
