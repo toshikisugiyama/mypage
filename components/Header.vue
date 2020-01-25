@@ -51,7 +51,7 @@ export default {
       margin-bottom: 5px;
       background-color: $light-color;
       filter: drop-shadow(1px 1px 1px $dark-color);
-      transition: all .3s ease-out;
+      transition: all $animation-time ease-out;
     }
     &_bar:last-child {
       margin-bottom: 0;

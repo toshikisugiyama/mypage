@@ -43,10 +43,10 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/variable.scss';
 .slide-enter-active {
-  animation: slide-in 0.3s;
+  animation: slide-in $animation-time;
 }
 .slide-leave-active {
-  animation: slide-in 0.3s reverse;
+  animation: slide-in $animation-time reverse;
 }
 @keyframes slide-in {
   from {
@@ -74,7 +74,7 @@ export default {
       padding: 0;
       &__item {
         height: $header-height*2.5;
-        transition: background-color 0.3s;
+        transition: background-color $animation-time;
         display: flex;
         flex-direction: column;
         justify-content: center;

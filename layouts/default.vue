@@ -4,6 +4,7 @@
     <Layer :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
     <Menu :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
     <nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -11,11 +12,13 @@
 import Header from '@/components/Header.vue'
 import Layer from '@/components/Layer.vue'
 import Menu from '@/components/Menu.vue'
+import Footer from '../components/Footer.vue'
 export default {
   components: {
     Header,
     Layer,
     Menu,
+    Footer,
   },
   data() {
     return {

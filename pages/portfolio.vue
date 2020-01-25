@@ -16,18 +16,13 @@
       </div>
     </div>
   </section>
-  <Footer />
 </div>
 </template>
 
 <script>
-import Footer from '../components/Footer.vue'
 import name_game from '@/assets/images/name_game.svg'
 import count_down from '@/assets/images/count_down.svg'
 export default {
-  components: {
-    Footer,
-  },
   data() {
     return {
       works: [
