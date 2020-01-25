@@ -9,7 +9,7 @@
 @import '@/assets/scss/variable.scss';
 .footer {
   padding: $side-space;
-  background-color: $dark-color;
+  background-color: #000;
   color: $light-color;
   &__sns {
     height: 30px;
