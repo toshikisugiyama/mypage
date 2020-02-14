@@ -5,7 +5,7 @@
         <ul class="menu__nav__lists">
           <li class="menu__nav__lists__item" v-for="menu in menus" :key="menu.title" @click="clickMenu">
             <n-link :to="menu.path">
-              {{ menu.title }}
+              {{ menu.title.toUpperCase() }}
             </n-link>
           </li>
         </ul>
@@ -27,7 +27,6 @@ export default {
       menus: [
         { title: 'top', path: '/', },
         { title: 'portfolio', path: '/portfolio', },
-        { title: 'blog', path: '/blog', },
         { title: 'contact', path: '/contact', },
       ],
     }
