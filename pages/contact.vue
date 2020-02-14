@@ -1,49 +1,68 @@
 <template>
-  <section class="contact">
-    <h1 class="contact__title">contact</h1>
-    <form method="POST" name="contact" class="contact__form" netlify>
-      <p class="contact__form__item">
-        <label for="name">お名前</label>
-        <input type="text" id="name" name="name" />
-      </p>
-      <p class="contact__form__item">
-        <label for="email">Eメール</label>
-        <input type="email" id="email" name="email" />
-      </p>
-      <p class="contact__form__item">
-        <label for="content">内容</label>
-        <textarea name="content" id="content" cols="30" rows="10"></textarea>
-      </p>
-      <p class="contact__form__item">
-        <button type="submit">送信</button>
-      </p>
-    </form>
-  </section>
+  <main class="contact">
+    <v-container tag="section" class="contact__content">
+      <v-row class="contact__content__row">
+        <v-col v-text="title.toUpperCase()" class="contact__content__row__title" cols="12" tag="h1" />
+      </v-row>
+      <v-row>
+        <v-col cols="12">
+          <v-form dark netlify>
+            <v-col v-for="(form, index) in forms" :key="index" cols="12">
+              <v-text-field
+                v-model="form.model"
+                :label="form.label"
+                required
+              />
+            </v-col>
+            <v-btn>
+              {{ button }}
+            </v-btn>
+          </v-form>
+        </v-col>
+      </v-row>
+    </v-container>
+  </main>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      title: 'contact',
+      button: '送信',
+      forms: [
+        {
+          label: 'お名前',
+          model: ''
+        },
+        {
+          label: 'Eメール',
+          model: ''
+        },
+        {
+          label: '内容',
+          model: ''
+        }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/variable.scss';
 .contact{
   padding: $header-height $side-space;
   background-color: $main-color;
-  height: 100vh;
+  min-height: 100vh;
   color: $light-color;
-  &__title {
-    text-align: center;
-    padding: 0 $side-space;
-    @include title;
-  }
-  &__form {
-    width: 100%;
-    margin: 0 auto;
-    &__item {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: $header-height/2;
-    }
-    &__item:last-child {
-      display: block;
-      text-align: center;
+  &__content {
+    &__row {
+      &__title {
+        text-align: center;
+        padding: 0 $side-space;
+        @include title;
+      }
     }
   }
 }

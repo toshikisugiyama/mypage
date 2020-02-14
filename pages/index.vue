@@ -75,7 +75,8 @@ export default {
   &__top{
     background-color: $main-color;
     padding: $header-height+20px $side-space;
-    height: 568px;
+    height: 100vh;
+    // height: 568px;
     text-align: center;
     color: $light-color;
     &__container {
