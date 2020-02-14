@@ -6,7 +6,7 @@
       </v-row>
       <v-row class="form">
         <v-col cols="12" class="form__wrapper">
-          <v-form netlify>
+          <v-form method="POST" netlify>
             <v-col
               v-for="(form, index) in forms"
               :key="index"
@@ -17,6 +17,7 @@
                 v-if="index < 2"
                 v-model="form.model"
                 :label="form.label"
+                :type="form.type"
                 dark
                 required
               />
@@ -31,6 +32,7 @@
             <v-col cols="12" class="v-form__item">
               <v-btn
                 :disabled="isEmpty"
+                type="submit"
                 dark
                 outlined
               >
@@ -53,10 +55,12 @@ export default {
       forms: [
         {
           label: 'お名前',
+          type: 'text',
           model: ''
         },
         {
           label: 'Eメール',
+          type: 'email',
           model: ''
         },
         {
