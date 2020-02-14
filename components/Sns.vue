@@ -17,12 +17,14 @@ import github from '@/assets/images/github.svg'
 import twitter from '@/assets/images/twitter.svg'
 import facebook from '@/assets/images/facebook.svg'
 import instagram from '@/assets/images/instagram.svg'
+import qiita from '@/assets/images/qiita.svg'
 export default {
   data() {
     return {
       snsAccounts: [
         {name: 'github', src: github, url: 'https://github.com/toshikisugiyama',},
-        {name: 'twitter', src: twitter, url: 'https://twitter.com/llwz886q',},
+        {name: 'qiita', src: qiita, url: 'https://qiita.com/toshikisugiyama',},
+        // {name: 'twitter', src: twitter, url: 'https://twitter.com/llwz886q',},
         {name: 'facebook', src: facebook, url: 'https://www.facebook.com/toshiki.sugiyama.31',},
         {name: 'instagram', src: instagram, url: 'https://www.instagram.com/axa81468',},
       ],
