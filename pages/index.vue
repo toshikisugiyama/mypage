@@ -19,7 +19,7 @@
             cols="12"
             class="main__top__container__row__figure"
           >
-            <v-img :src="face" :alt="name.ja" height="180px" contain />
+            <v-img :src="face" :alt="name.ja" height="175px" width="175px" contain />
           </v-col>
           <v-col cols="12">
             <Sns />
@@ -60,9 +60,8 @@ export default {
       },
       contents: [
         "　兵庫県出身、1990年生まれ",
-        "　学生時代は、3年間藻類を研究しました。",
-        "　食酢の製造会社で3年間勤務の後、フィリピンセブ島のスクールで英語とプログラミングを学び、翌年には再びセブ島に戻り、オフショア開発案件を担当しました。",
-        "　現在WordPressの案件を受けていますが、Vue.js、ReactなどのJavaScriptフレームワークやPHPフレームワークのLaravelの学習を兼ねて、それらを用いた開発を行っています。",
+        "　食品会社で3年間勤務の後、フィリピンセブ島でオフショア開発案件を担当しました。",
+        "　WordPress、JavaScript(Vue.js、React)、PHP(Laravel)の学習も兼ねて、それらを用いた開発を行っています。",
       ]
     }
   },
@@ -79,6 +78,8 @@ export default {
     // height: 568px;
     text-align: center;
     color: $light-color;
+    display: flex;
+    align-items: center;
     &__container {
       &__row {
         &__title:first-child {
@@ -89,12 +90,10 @@ export default {
         }
         &__figure {
           .v-image {
-            width: 175px;
-            height: 175px;
             border-radius: 50%;
             border: $light-color solid 1px;
             background-color: #fff;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px;
             overflow: hidden;
           }
         }
