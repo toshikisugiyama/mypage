@@ -6,7 +6,7 @@
       </v-row>
       <v-row class="form">
         <v-col cols="12" class="form__wrapper">
-          <v-form method="POST" netlify>
+          <v-form>
             <v-col
               v-for="(form, index) in forms"
               :key="index"
@@ -32,7 +32,7 @@
             <v-col cols="12" class="v-form__item">
               <v-btn
                 :disabled="isEmpty"
-                type="submit"
+                @click="submit"
                 dark
                 outlined
               >
@@ -71,13 +71,24 @@ export default {
     }
   },
   computed: {
+    name () {return this.forms[0].model},
+    email () {return this.forms[1].model},
+    content () {return this.forms[2].model},
     isEmpty () {
-      let models = []
-      this.forms.forEach(element => {
-        models.push(element.model)
-      })
-      const array = models.find(element => element === "")
-      return (array === "")
+      if (this.name !== "" && this.email !== "" && this.content !== "") {
+        return false
+      }
+      return true
+    }
+  },
+  methods: {
+    async submit () {
+      const params = new FormData()
+      params.append('form-name', 'contact')
+      params.append('name', this.name)
+      params.append('email', this.email)
+      params.append('content', this.content)
+      await this.$axios.$post(window.location.origin, params)
     }
   }
 }
