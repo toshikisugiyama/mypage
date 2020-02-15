@@ -23,6 +23,7 @@
                 v-model="form.model"
                 :label="form.label"
                 :type="form.type"
+                :name="form.name"
                 dark
                 required
               />
@@ -30,6 +31,7 @@
                 v-else
                 v-model="form.model"
                 :label="form.label"
+                :name="form.name"
                 dark
                 required
               />
@@ -59,16 +61,19 @@ export default {
       button: '送信',
       forms: [
         {
+          name: 'name',
           label: 'お名前',
           type: 'text',
           model: ''
         },
         {
+          name: 'email',
           label: 'Eメール',
           type: 'email',
           model: ''
         },
         {
+          name: 'content',
           label: '内容',
           model: ''
         }
