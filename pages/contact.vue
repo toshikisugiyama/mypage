@@ -90,18 +90,7 @@ export default {
       }
       return true
     }
-  },
-  // methods: {
-  //   async submit () {
-  //     const params = new FormData()
-  //     params.append('form-name', 'contact')
-  //     params.append('name', this.name)
-  //     params.append('email', this.email)
-  //     params.append('content', this.content)
-  //     const response = await this.$axios.$post(window.location.origin, params)
-  //     console.log(response)
-  //   }
-  // }
+  }
 }
 </script>
 
