@@ -11,6 +11,7 @@
               v-show="false"
               v-model="title"
               name="form-name"
+              autofocus
             />
             <v-col
               v-for="(form, index) in forms"
