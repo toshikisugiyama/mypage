@@ -1,6 +1,6 @@
 <template>
 <main class="illustrator">
-  <v-container class="illustrator__content" tag="section" >
+  <v-container class="illustrator__content" tag="section">
     <v-row class="illustrator__content__row">
       <v-col v-text="title.toUpperCase()" tag="h1" cols="12" class="illustrator__content__row__title" />
     </v-row>
@@ -48,6 +48,10 @@ export default {
   color: $light-color;
   min-height: 100vh;
   &__content {
+    @media screen and (max-width: 960px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &__row {
       &__title {
         text-align: center;

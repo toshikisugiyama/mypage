@@ -105,7 +105,7 @@ export default {
     }
   }
   &__bottom {
-    padding: $header-height $side-space;
+    padding: $header-height 0;
     background-color: #000;
     color: $light-color;
   }
