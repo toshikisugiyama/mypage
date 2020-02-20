@@ -5,9 +5,7 @@
       :class="{'header__menu_open': activeMenu}"
       @click="clickMenu"
     >
-      <div class="header__menu__bar"></div>
-      <div class="header__menu__bar"></div>
-      <div class="header__menu__bar"></div>
+      <div v-for="n in 3" :key="n" class="header__menu__bar"></div>
     </div>
   </header>
 </template>
