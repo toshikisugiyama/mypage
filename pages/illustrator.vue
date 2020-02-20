@@ -48,10 +48,6 @@ export default {
   color: $light-color;
   min-height: 100vh;
   &__content {
-    @media screen and (max-width: 960px) {
-      padding-left: 0;
-      padding-right: 0;
-    }
     &__row {
       &__title {
         text-align: center;
