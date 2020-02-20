@@ -27,6 +27,7 @@ export default {
       menus: [
         { title: 'top', path: '/', },
         { title: 'portfolio', path: '/portfolio', },
+        { title: 'illustrator', path: '/illustrator', },
         { title: 'contact', path: '/contact', },
       ],
     }
