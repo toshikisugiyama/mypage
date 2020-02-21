@@ -20,11 +20,23 @@ import number01 from '@/assets/images/illustrators/number01.svg'
 import number02 from '@/assets/images/illustrators/number02.svg'
 import number03 from '@/assets/images/illustrators/number03.svg'
 import number04 from '@/assets/images/illustrators/number04.svg'
+import number05 from '@/assets/images/illustrators/number05.svg'
+import number06 from '@/assets/images/illustrators/number06.svg'
+import number07 from '@/assets/images/illustrators/number07.svg'
+import number08 from '@/assets/images/illustrators/number08.svg'
+import number09 from '@/assets/images/illustrators/number09.svg'
+import number10 from '@/assets/images/illustrators/number10.svg'
 export default {
   data() {
     return {
       title: 'illustrator',
       illustrators: [
+        {title: 'number10', src: number10 },
+        {title: 'number09', src: number09 },
+        {title: 'number08', src: number08 },
+        {title: 'number07', src: number07 },
+        {title: 'number06', src: number06 },
+        {title: 'number05', src: number05 },
         {title: 'number04', src: number04 },
         {title: 'number03', src: number03 },
         {title: 'number02', src: number02 },
