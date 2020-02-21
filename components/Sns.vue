@@ -14,7 +14,7 @@
 
 <script>
 import github from '@/assets/images/github.svg'
-// import twitter from '@/assets/images/twitter.svg'
+import twitter from '@/assets/images/twitter.svg'
 import facebook from '@/assets/images/facebook.svg'
 import instagram from '@/assets/images/instagram.svg'
 import qiita from '@/assets/images/qiita.svg'
@@ -24,7 +24,7 @@ export default {
       snsAccounts: [
         {name: 'github', src: github, url: 'https://github.com/toshikisugiyama',},
         {name: 'qiita', src: qiita, url: 'https://qiita.com/toshikisugiyama',},
-        // {name: 'twitter', src: twitter, url: 'https://twitter.com/llwz886q',},
+        {name: 'twitter', src: twitter, url: 'https://twitter.com/llwz886q',},
         {name: 'facebook', src: facebook, url: 'https://www.facebook.com/toshiki.sugiyama.31',},
         {name: 'instagram', src: instagram, url: 'https://www.instagram.com/axa81468',},
       ],
@@ -39,7 +39,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 175px;
+  width: 200px;
   margin: 0 auto;
   &__item {
     margin: 0;
