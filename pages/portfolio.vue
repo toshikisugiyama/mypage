@@ -1,20 +1,14 @@
-<template>
-<main class="portfolio">
-  <v-container class="portfolio__content" tag="section" >
-    <v-row class="portfolio__content__row">
-      <v-col v-text="title.toUpperCase()" tag="h1" cols="12" class="portfolio__content__row__title" />
-    </v-row>
-    <v-row class="portfolio__content__wrapper">
-      <v-col v-for="work in works" :key="work.src" class="portfolio__content__wrapper__item" cols="12" md="4">
-        <v-card @click="toPage(work.url)">
-          <v-card-title v-text="work.title" />
-          <v-img :src="work.src" :alt="work.title" />
-          <v-card-text v-text="work.description" />
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-</main>
+<template lang="pug">
+  main.portfolio
+    v-container.portfolio__content(tag="section")
+      v-row.portfolio__content__row
+        v-col.portfolio__content__row__title(v-text="title.toUpperCase()" tag="h1" cols="12")
+      v-row.portfolio__content__wrapper
+        v-col.portfolio__content__wrapper__item(v-for="work in works" :key="work.src" cols="12" md="4")
+          v-card(@click="toPage(work.url)")
+            v-card-title(v-text="work.title")
+            v-img(:src="work.src" :alt="work.title")
+            v-card-text(v-text="work.description")
 </template>
 
 <script>

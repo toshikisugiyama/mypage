@@ -1,11 +1,10 @@
-<template>
-  <div>
-    <Header :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
-    <Layer :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
-    <Menu :activeMenu="activeMenu" @clickMenu="activeMenu=$event" />
-    <nuxt />
-    <Footer />
-  </div>
+<template lang="pug">
+  div
+    Header(:activeMenu="activeMenu" @clickMenu="activeMenu=$event")
+    Layer(:activeMenu="activeMenu" @clickMenu="activeMenu=$event")
+    Menu(:activeMenu="activeMenu" @clickMenu="activeMenu=$event")
+    nuxt
+    Footer
 </template>
 
 <script>

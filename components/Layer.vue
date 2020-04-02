@@ -1,7 +1,6 @@
-<template>
-  <transition name="fade">
-    <div class="layer" @click="clickMenu" v-if="activeMenu"></div>
-  </transition>
+<template lang="pug">
+  transition(name="fade")
+    .layer(@click="clickMenu" v-if="activeMenu")
 </template>
 
 <script>

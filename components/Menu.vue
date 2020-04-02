@@ -1,17 +1,10 @@
-<template>
-  <transition name="slide">
-    <aside class="menu" v-if="activeMenu">
-      <nav class="menu__nav">
-        <ul class="menu__nav__lists">
-          <li class="menu__nav__lists__item" v-for="menu in menus" :key="menu.title" @click="clickMenu">
-            <n-link :to="menu.path">
-              {{ menu.title.toUpperCase() }}
-            </n-link>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  </transition>
+<template lang="pug">
+  transition(name="slide")
+    aside.menu(v-if="activeMenu")
+      nav.menu__nav
+        ul.menu__nav__lists
+          li.menu__nav__lists__item(v-for="menu in menus" :key="menu.title" @click="clickMenu")
+            n-link(:to="menu.path") {{ menu.title.toUpperCase() }}
 </template>
 
 <script>

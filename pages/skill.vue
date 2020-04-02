@@ -1,7 +1,6 @@
-<template>
-  <section class="skill">
-    <h1>skill</h1>
-  </section>
+<template lang="pug">
+  section.skill
+    h1 skill
 </template>
 
 <style lang="scss" scoped>

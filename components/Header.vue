@@ -1,13 +1,7 @@
-<template>
-  <header class="header">
-    <div
-      class="header__menu"
-      :class="{'header__menu_open': activeMenu}"
-      @click="clickMenu"
-    >
-      <div v-for="n in 3" :key="n" class="header__menu__bar"></div>
-    </div>
-  </header>
+<template lang="pug">
+  header.header
+    .header__menu(:class="{'header__menu_open': activeMenu}" @click="clickMenu")
+      .header__menu__bar(v-for="n in 3" :key="n")
 </template>
 
 <script>

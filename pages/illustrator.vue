@@ -1,18 +1,12 @@
-<template>
-<main class="illustrator">
-  <v-container class="illustrator__content" tag="section">
-    <v-row class="illustrator__content__row">
-      <v-col v-text="title.toUpperCase()" tag="h1" cols="12" class="illustrator__content__row__title" />
-    </v-row>
-    <v-row class="illustrator__content__wrapper">
-      <v-col v-for="illustrator in illustrators" :key="illustrator.src" class="illustrator__content__wrapper__item" cols="12" md="4">
-        <v-card>
-          <v-img :src="illustrator.src" :alt="illustrator.title" />
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-</main>
+<template lang="pug">
+  main.illustrator
+    v-container.illustrator__content(tag="section")
+      v-row.illustrator__content__row
+        v-col.illustrator__content__row__title(v-text="title.toUpperCase()" tag="h1" cols="12")
+      v-row.illustrator__content__wrapper
+        v-col.illustrator__content__wrapper__item(v-for="illustrator in illustrators" :key="illustrator.src" cols="12" md="4")
+          v-card
+            v-img(:src="illustrator.src" :alt="illustrator.title")
 </template>
 
 <script>

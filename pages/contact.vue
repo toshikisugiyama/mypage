@@ -1,57 +1,17 @@
-<template>
-  <main class="contact">
-    <v-container tag="section" class="contact__content">
-      <v-row class="contact__content__row">
-        <v-col v-text="title.toUpperCase()" class="contact__content__row__title" cols="12" tag="h1" />
-      </v-row>
-      <v-row class="form">
-        <v-col cols="12" class="form__wrapper">
-          <v-form netlify method="post">
-            <v-text-field
-              v-show="false"
-              v-model="title"
-              name="form-name"
-            />
-            <v-col
-              v-for="(form, index) in forms"
-              :key="index"
-              class="v-form__item"
-              cols="12"
-            >
-              <v-text-field
-                v-if="index < 2"
-                v-model="form.model"
-                :autofocus="(index === 0) ? true : false"
-                :label="form.label"
-                :type="form.type"
-                :name="form.name"
-                dark
-                required
-              />
-              <v-textarea
-                v-else
-                v-model="form.model"
-                :label="form.label"
-                :name="form.name"
-                dark
-                required
-              />
-            </v-col>
-            <v-col cols="12" class="v-form__item">
-              <v-btn
-                :disabled="isEmpty"
-                type="submit"
-                dark
-                outlined
-              >
-                {{ button }}
-              </v-btn>
-            </v-col>
-          </v-form>
-        </v-col>
-      </v-row>
-    </v-container>
-  </main>
+<template lang="pug">
+  main.contact
+    v-container.contact__content(tag="section")
+      v-row.contact__content__row
+        v-col.contact__content__row__title(v-text="title.toUpperCase()" cols="12" tag="h1")
+      v-row.form
+        v-col.form__wrapper(cols="12")
+          v-form(netlify method="post")
+            v-text-field(v-show="false" v-model="title" name="form-name")
+            v-col.v-form__item(v-for="(form, index) in forms" :key="index" cols="12")
+              v-text-field(v-if="index < 2" v-model="form.model" :autofocus="(index === 0) ? true : false" :label="form.label" :type="form.type" :name="form.name" dark required)
+              v-textarea(v-else v-model="form.model" :label="form.label" :name="form.name" dark required)
+            v-col.v-form__item(cols="12")
+              v-btn(:disabled="isEmpty" type="submit" dark outlined) {{ button }}
 </template>
 
 <script>

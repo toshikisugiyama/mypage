@@ -1,46 +1,18 @@
-<template>
-  <main class="main" >
-    <section class="main__top">
-      <v-container class="main__top__container">
-        <v-row class="main__top__container__row">
-          <v-col
-            v-text="name.en"
-            tag="h1"
-            cols="12"
-            class="main__top__container__row__title"
-          />
-          <v-col
-            v-text="name.ja"
-            tag="h2"
-            cols="12"
-            class="main__top__container__row__title"
-          />
-          <v-col
-            cols="12"
-            class="main__top__container__row__figure"
-          >
-            <v-img :src="face" :alt="name.ja" height="175px" width="175px" contain />
-          </v-col>
-          <v-col cols="12">
-            <Sns />
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
-    <section class="main__bottom">
-      <v-container class="main__bottom__container">
-        <v-row class="main__bottom__container__row">
-          <v-col
-            v-for="(item, index) in contents"
-            :key="index"
-            v-text="item"
-            cols="12"
-            tag="p"
-          />
-        </v-row>
-      </v-container>
-    </section>
-  </main>
+<template lang="pug">
+  main.main
+    section.main__top
+      v-container.main__top__container
+        v-row.main__top__container__row
+          v-col.main__top__container__row__title(v-text="name.en" tag="h1" cols="12")
+          v-col.main__top__container__row__title(v-text="name.ja" tag="h2" cols="12")
+          v-col.main__top__container__row__figure(cols="12")
+            v-img(:src="face" :alt="name.ja" height="175px" width="175px" contain)
+          v-col(cols="12")
+            Sns
+    section.main__bottom
+      v-container.main__bottom__container
+        v-row.main__bottom__container__row
+          v-col(v-for="(item, index) in contents" :key="index" v-text="item" cols="12" tag="p")
 </template>
 
 <script>

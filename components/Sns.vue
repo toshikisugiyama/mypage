@@ -1,15 +1,8 @@
-<template>
-  <div class="sns">
-    <figure
-      class="sns__item"
-      v-for="sns in snsAccounts"
-      :key="sns.name"
-    >
-      <a :href="sns.url">
-        <img :src="sns.src" :alt="sns.name" height="32px">
-      </a>
-    </figure>
-  </div>
+<template lang="pug">
+  .sns
+    figure.sns__item(v-for="sns in snsAccounts" :key="sns.name")
+      a(:href="sns.url")
+        img(:src="sns.src" :alt="sns.name" height="32px")
 </template>
 
 <script>

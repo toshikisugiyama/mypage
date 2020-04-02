@@ -1,8 +1,7 @@
-<template>
-  <footer class="footer">
-    <Sns />
-    <div class="footer__copyright">&#169;sugiyamatoshiki</div>
-  </footer>
+<template lang="pug">
+  footer.footer
+    Sns
+    .footer__copyright &#169;sugiyamatoshiki
 </template>
 
 <script>
